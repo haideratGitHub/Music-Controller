@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # this below line is saying whatever the url is, take it to the urls of app named "api"
-    path("", include("api.urls")),
+    # this below line is saying when the url is api, take it to the urls of app named "api"
+    path("api/", include("api.urls")),
+    path("", include("frontend.urls")),
 ]
